@@ -1,0 +1,392 @@
+* {
+	margin: 0px;
+}
+
+header {
+	background: rgba(18, 41, 54, 0.5);
+	width: 100%;
+	height: 35px;
+	position: fixed;
+	z-index: 1;
+}
+
+nav {
+	width: 1100px;
+}
+
+#logo {
+	width: 29.4px;
+	height: 34.6px;
+	float: left;
+	padding-left: 40px;
+}
+
+#menu {
+	list-style-type: none;
+}
+
+#menu li {
+	float:left;
+	padding-left: 50px;
+}
+
+#menu a {
+	font-size:  12px;
+	font-weight: 100;
+	color: #CCE8DC;
+	letter-spacing: 2px;
+	line-height: 35px;
+	padding: 10px;
+	transition: all 0.25s ease-in;
+}
+
+#menu a:hover {
+	color: #112936;
+	background: #CCE8DC;
+} 
+
+#menu a:active {
+	background: #CCE8DC;
+}
+
+h1 {
+	font: 72px 'Droid Serif', Serif;
+	color: #CCE8DC;
+}
+
+h2 {
+	font: 20px 'Droid Serif', Serif;
+	color: #CCE8DC;
+	padding-bottom: 15px;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+p {
+	font: 12px 'Open Sans', sans-serif;
+	color: #CCE8DC;
+}
+
+section {
+	height: 100%;
+}
+
+
+/*---FULLSCREEN SECTION BACKGROUNDS VIA www.minimit.com/demos/parallax-backgrounds-with-centered-content---*/
+	/* background setup */
+	.background {
+		background-repeat:no-repeat;
+		/* custom background-position */
+		background-position:50% bottom;
+		/* ie8- graceful degradation */
+		background-position:50% bottom\9 !important;
+	}
+
+	/* fullscreen setup */
+	html, body {
+		/* give this to all tags from html to .fullscreen */
+		height:100%;
+	}
+	.fullscreen,
+	.content-a {
+		width:100%;
+		min-height:100%;
+	}
+	.not-fullscreen,
+	.not-fullscreen .content-a,
+	.fullscreen.not-overflow,
+	.fullscreen.not-overflow .content-a {
+		height:100%;
+		overflow:hidden;
+	}
+/*---///FULLSCREEN SECTION BACKGROUNDS VIA www.minimit.com/demos/parallax-backgrounds-with-centered-content*/
+
+/* VISIBLE FADE IN/OUT */
+	.on-screen {
+		opacity: 1;
+		margin-bottom: 0;
+		transition: 1.5s all ease-in;
+	}
+	
+	.off-screen {
+		opacity: 0;
+		margin-bottom: 300px;
+		transition: 1.5s all ease-in;
+	}
+/* VISIBLE FADE IN/OUT */
+
+
+#home-content {
+	margin: 0 auto 0 auto;
+	width: 500px;
+	padding-top: 200px;
+}
+
+.arrow-down {
+	clear: both;
+	margin: 0 auto 0 auto;
+	width: 25px;
+	opacity:0.5;
+	position: absolute;
+	bottom: 30px;
+	left: 48%;
+	transition: opacity 0.2s ease-in;
+	z-index: 1;
+}
+
+.arrow-down:hover {
+	opacity: 0.20;
+}
+
+
+
+#photo-gallery {
+	position: relative;
+	bottom: 620px;
+	width: 80%;
+	height: 534px;
+	overflow: hidden;
+	margin-left: 50px;
+}
+
+#photo-gallery ul li a img {
+	   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+#photo-gallery ul li a img:hover {
+	   filter: none; /* Firefox 10+ */
+    filter: none; /* IE6-9 */
+    -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+#photo-gallery ul {
+	list-style-type: none;
+}
+
+#photo-gallery ul li {
+	float:left;
+}
+
+#about-content {
+	position: relative;
+	bottom: 620px;
+	width: 400px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#map {
+	position: relative;
+	bottom: 900px;
+	float: right;
+	overflow: hidden;
+}
+
+/* ---------- CONTACT FORM ---------------- */
+		#contact-form {
+			position: relative;
+			bottom: 620px;
+			width: 600px;
+			height: 534px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+
+		label  {
+			display: block;
+			font: 12px Open Sans, light, sans serif;
+			padding-bottom: 8px;
+			color: #CCE8DC;
+		}
+
+		.checkbox-text {
+			font: 12px Open Sans, light, sans serif;
+			color: #CCE8DC;
+		}
+
+		.field,  input[type="textarea"] {
+			display: block;
+			outline: none !important;
+			border-style: none;
+			padding: 5px;
+			background-color: #87ceb5;
+			border: 0px none;
+			margin-bottom: 15px;
+			width: 600px;
+		}
+
+
+		input[type="textarea"] {
+			height: 200px;
+			color: #2a8468;
+			
+			-webkit-appearance: none;
+		}
+
+		::-webkit-input-placeholder {
+			font-style: italic;
+			color: #CCE8DC;
+		}
+
+		input[type="textarea"]:hover,  input[type="textarea"]:focus, input[type="textfield"]:hover, input[type="textfield"]:focus {
+			box-shadow: 1px 1px 1px 1px #2a8468 inset;
+		}
+
+		input[type=submit] {
+			text-align: center;
+			padding: 10px 20px;
+			cursor: pointer;
+			border: 2px solid #CCE8DC ;
+			background: none;
+			color: #CCE8DC;
+			font: 14px "Open Sans", sans-serif;
+			font-weight: 100;
+			background-color: none;		
+			transition: all 0.25s linear;
+			width: 600px;
+			margin-top: 15px;
+		}
+
+		input[type=submit]:hover {
+			border-radius: 15px;
+			opacity: 0.5;
+		}
+
+/* --------- //CONTACT FORM ---------------- */
+
+/* --------------------carouFredSel SLIDER STYLE--------------------- */
+.wrapper {
+	width: 100%;
+	margin-top: 80px;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+
+.wrapper h2 {
+	color: #725D54;
+}
+
+.list_carousel {
+		width: 4000px;
+		float:left;
+		padding: 0 70px
+
+}
+
+.list_carousel ul {
+	list-style-type: none;
+}
+
+.list_carousel ul li {
+	float: left;
+	width: 30%;
+	height: 150px;
+}
+
+.list_carousel ul li:last-child{
+	margin: 0;
+}	
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+#news1 {
+	background: url(../img/red.jpg)
+}
+
+#news2 {
+	background: url(../img/window.jpg)
+}
+
+#news3 {
+	background: url(../img/sunset.jpg)
+}
+
+#news4 {
+	background: url(../img/window.jpg)
+}
+
+#news5 {
+	background: url(../img/red.jpg)
+}
+
+#news6 {
+	background: url(../img/sunset.jpg)
+}
+
+
+.news-title {
+	color: #725D54;
+	background: #FFFAEE;
+	display: block;
+	text-align: center;
+}
+
+#prev, #next {
+	display: block;
+	width: 110px;
+	height: 220px;
+	/*float: left;*/
+	position: absolute;	
+	z-index: 1;
+	transition: opacity 0.18s ease-in;
+}
+
+#prev {
+	background: url(../img/arrow-left.png) no-repeat #FFFAEE;
+	background-position: center center;
+	left: 0;
+}
+
+#next {
+	background: url(../img/arrow-right.png) no-repeat #FFFAEE;
+	background-position: center center;
+	right: 0;
+}
+
+#prev:hover, #next:hover  {
+	opacity: 0.8;
+}
+
+
+/* ----////carouFredSel SLIDER STYLE----------------------------------------*/	
+
+.video-container {
+	text-align: center;
+}
+
+.video-controls {
+	padding-top: 25%;
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.play-pause {
+	text-align: center;
+	padding: 10px 20px;
+	border: 2px solid #CCE8DC ;
+	color: #CCE8DC;
+	text-decoration: none;
+	font: 14px "Open Sans", sans-serif;
+	font-weight: 100;
+	background-color: none;		
+	transition: all 0.25s linear;
+}
+
+.play-pause:hover {
+	border-radius: 15px;
+	opacity: 0.5;
+} 
