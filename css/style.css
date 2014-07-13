@@ -20,35 +20,36 @@ nav {
 	float: left;
 	padding-left: 40px;
 }
+/*MENU*/
+	#menu {
+		list-style-type: none;
+	}
 
-#menu {
-	list-style-type: none;
-}
+	#menu li {
+		float:left;
+		padding-left: 50px;
+	}
 
-#menu li {
-	float:left;
-	padding-left: 50px;
-}
+	#menu a {
+		font-size:  12px;
+		font-weight: 100;
+		color: #CCE8DC;
+		letter-spacing: 2px;
+		line-height: 35px;
+		padding: 10px;
+		transition: all 0.25s ease-in;
+	}
 
-#menu a {
-	font-size:  12px;
-	font-weight: 100;
-	color: #CCE8DC;
-	letter-spacing: 2px;
-	line-height: 35px;
-	padding: 10px;
-	transition: all 0.25s ease-in;
-}
+	#menu a:hover {
+		color: #112936;
+		background: #CCE8DC;
+	} 
 
-#menu a:hover {
-	color: #112936;
-	background: #CCE8DC;
-} 
-
-#menu a:active {
-	background: #CCE8DC;
-}
-
+	#menu a:active {
+		background: #CCE8DC;
+	}
+/*END MENU*/	
+/*TYPOGRAPHY*/
 h1 {
 	font: 72px 'Droid Serif', Serif;
 	color: #CCE8DC;
@@ -69,17 +70,12 @@ p {
 	font: 12px 'Open Sans', sans-serif;
 	color: #CCE8DC;
 }
-
-section {
-	height: 100%;
-}
-
+/*///TYPOGRAPHY*/
 
 /*---FULLSCREEN SECTION BACKGROUNDS VIA www.minimit.com/demos/parallax-backgrounds-with-centered-content---*/
 	/* background setup */
 	.background {
-		background-repeat:no-repeat;
-		/* custom background-position */
+		background-repeat:no-repeat;		
 		background-position:50% bottom;
 		/* ie8- graceful degradation */
 		background-position:50% bottom\9 !important;
@@ -120,10 +116,7 @@ section {
 		margin-bottom: 300px;
 		transition: 1.5s all ease-in;
 	}
-
-
-/* VISIBLE FADE IN/OUT */
-
+/* /// VISIBLE FADE IN/OUT */
 
 #home-content {
 	margin: 0 auto 0 auto;
@@ -146,9 +139,7 @@ section {
 .arrow-down:hover {
 	opacity: 0.20;
 }
-
-
-
+/*PHOTO GALLERY*/
 #photo-gallery {
 	position: relative;
 	bottom: 620px;
@@ -181,6 +172,7 @@ section {
 #photo-gallery ul li {
 	float:left;
 }
+/*///PHOTO GALLERY*/
 
 #about-content {
 	position: relative;
@@ -197,7 +189,7 @@ section {
 	overflow: hidden;
 }
 
-/* ---------- CONTACT FORM ---------------- */
+/*CONTACT FORM */
 		#contact-form {
 			position: relative;
 			bottom: 620px;
@@ -267,106 +259,104 @@ section {
 			opacity: 0.5;
 		}
 
-/* --------- //CONTACT FORM ---------------- */
+/*///CONTACT FORM */
 
 /* --------------------carouFredSel SLIDER STYLE--------------------- */
-.wrapper {
-	width: 100%;
-	margin-top: 80px;
-	float: left;
-	overflow: hidden;
-	text-align: center;
-}
+	.wrapper {
+		width: 100%;
+		margin-top: 80px;
+		float: left;
+		overflow: hidden;
+		text-align: center;
+	}
 
-.wrapper h2 {
-	color: #725D54;
-}
+	.wrapper h2 {
+		color: #725D54;
+	}
 
-.list_carousel {
-		width: 4000px;
-		float:left;
-		padding: 0 70px
+	.list_carousel {
+			width: 4000px;
+			float:left;
+			padding: 0 70px
 
-}
+	}
 
-.list_carousel ul {
-	list-style-type: none;
-}
+	.list_carousel ul {
+		list-style-type: none;
+	}
 
-.list_carousel ul li {
-	float: left;
-	width: 30%;
-	height: 150px;
-}
+	.list_carousel ul li {
+		float: left;
+		width: 30%;
+		height: 150px;
+	}
 
-.list_carousel ul li:last-child{
-	margin: 0;
-}	
+	.list_carousel ul li:last-child{
+		margin: 0;
+	}	
 
-.clearfix {
-	float: none;
-	clear: both;
-}
+	.clearfix {
+		float: none;
+		clear: both;
+	}
 
-#news1 {
-	background: url(../img/red.jpg)
-}
+	#news1 {
+		background: url(../img/red.jpg)
+	}
 
-#news2 {
-	background: url(../img/window.jpg)
-}
+	#news2 {
+		background: url(../img/window.jpg)
+	}
 
-#news3 {
-	background: url(../img/sunset.jpg)
-}
+	#news3 {
+		background: url(../img/sunset.jpg)
+	}
 
-#news4 {
-	background: url(../img/window.jpg)
-}
+	#news4 {
+		background: url(../img/window.jpg)
+	}
 
-#news5 {
-	background: url(../img/red.jpg)
-}
+	#news5 {
+		background: url(../img/red.jpg)
+	}
 
-#news6 {
-	background: url(../img/sunset.jpg)
-}
-
-
-.news-title {
-	color: #725D54;
-	background: #FFFAEE;
-	display: block;
-	text-align: center;
-}
-
-#prev, #next {
-	display: block;
-	width: 110px;
-	height: 220px;
-	/*float: left;*/
-	position: absolute;	
-	z-index: 1;
-	transition: opacity 0.18s ease-in;
-}
-
-#prev {
-	background: url(../img/arrow-left.png) no-repeat #FFFAEE;
-	background-position: center center;
-	left: 0;
-}
-
-#next {
-	background: url(../img/arrow-right.png) no-repeat #FFFAEE;
-	background-position: center center;
-	right: 0;
-}
-
-#prev:hover, #next:hover  {
-	opacity: 0.8;
-}
+	#news6 {
+		background: url(../img/sunset.jpg)
+	}
 
 
+	.news-title {
+		color: #725D54;
+		background: #FFFAEE;
+		display: block;
+		text-align: center;
+	}
+
+	#prev, #next {
+		display: block;
+		width: 110px;
+		height: 220px;
+		/*float: left;*/
+		position: absolute;	
+		z-index: 1;
+		transition: opacity 0.18s ease-in;
+	}
+
+	#prev {
+		background: url(../img/arrow-left.png) no-repeat #FFFAEE;
+		background-position: center center;
+		left: 0;
+	}
+
+	#next {
+		background: url(../img/arrow-right.png) no-repeat #FFFAEE;
+		background-position: center center;
+		right: 0;
+	}
+
+	#prev:hover, #next:hover  {
+		opacity: 0.8;
+	}
 /* ----////carouFredSel SLIDER STYLE----------------------------------------*/	
 
 .video-container {
