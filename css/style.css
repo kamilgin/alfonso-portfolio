@@ -49,80 +49,97 @@ nav {
 		background: #CCE8DC;
 	}
 /*END MENU*/	
+
 /*TYPOGRAPHY*/
-h1 {
-	font: 72px 'Droid Serif', Serif;
-	color: #CCE8DC;
-}
+	body {
+		font-size: 16px;
+	}
 
-h2 {
-	font: 20px 'Droid Serif', Serif;
-	color: #CCE8DC;
-	padding-bottom: 15px;
-}
+	h1 {
+		font: 4.5em 'Droid Serif', Serif; /*72px/16px*/
+		color: #CCE8DC;
+	}
 
-a {
-	text-decoration: none;
-	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-}
+	h2 {
+		font: 1.25em 'Droid Serif', Serif; /*20/16px*/
+		color: #CCE8DC;
+		padding-bottom: 15px;
+	}
 
-p {
-	font: 12px 'Open Sans', sans-serif;
-	color: #CCE8DC;
-}
+	a {
+		text-decoration: none;
+		font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+	}
+
+	p {
+		font: 0.75em 'Open Sans', sans-serif; /*12/16px*/
+		color: #CCE8DC;
+	}
 /*///TYPOGRAPHY*/
-
-/*---FULLSCREEN SECTION BACKGROUNDS VIA www.minimit.com/demos/parallax-backgrounds-with-centered-content---*/
-	/* background setup */
-	.background {
-		background-repeat:no-repeat;		
-		background-position:50% bottom;
-		/* ie8- graceful degradation */
-		background-position:50% bottom\9 !important;
-	}
-
-	/* fullscreen setup */
-	html, body {
-		/* give this to all tags from html to .fullscreen */
-		height:100%;
-	}
-	.fullscreen,
-	.content-a {
-		width:100%;
-		min-height:100%;
-	}
-	.not-fullscreen,
-	.not-fullscreen .content-a,
-	.fullscreen.not-overflow,
-	.fullscreen.not-overflow .content-a {
-		height:100%;
-		overflow:hidden;
-	}
-
-	#home {
-		padding-bottom: 10px;
-	}
-/*---///FULLSCREEN SECTION BACKGROUNDS VIA www.minimit.com/demos/parallax-backgrounds-with-centered-content*/
 
 /* VISIBLE FADE IN/OUT */
 	.on-screen {
 		opacity: 1;
-		margin-bottom: 0;
-		transition: 1.5s all ease-in;
+		transition:  all 1.5s ease-in;
 	}
 	
 	.off-screen {
 		opacity: 0;
-		margin-bottom: 300px;
-		transition: 1.5s all ease-in;
+		transition:  all 1.5s ease-in;
 	}
 /* /// VISIBLE FADE IN/OUT */
 
-#home-content {
-	margin: 0 auto 0 auto;
-	width: 500px;
-	padding-top: 200px;
+/*HOME*/
+	section#home {
+		background: url('../img/home-background.jpg') no-repeat fixed;
+		background-position: 50% 80%;
+		width: 100%; 
+		height: 1000px;
+	}
+
+	#home-content {
+		margin: 0 auto 0 auto;
+		width: 35%;
+		padding-top: 10%;
+	}
+
+@media screen and (max-width: 500px) {
+	section#home {
+		height: 700px;
+	}
+}	
+
+/*RETINA SCREENS */
+@media 
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	section#home {
+		height: 1920px;
+		background: url('../img/home-bg-m.jpg') fixed no-repeat;
+		background: position;
+	}
+
+	#home-content {
+		width: 80%;
+		text-align: center;
+		padding-top: 25%;
+	}
+
+	h1 {
+		font-size: 7em;
+	}
+
+	h2 {
+		font-size: 4em;
+	}
+
+	p {
+		font-size: 2.5em;
+	}
 }
+/*RETINA SCREENS */
+
+/*///HOME*/
 
 .arrow-down {
 	clear: both;
@@ -139,39 +156,40 @@ p {
 .arrow-down:hover {
 	opacity: 0.20;
 }
+
 /*PHOTO GALLERY*/
-#photo-gallery {
-	position: relative;
-	bottom: 620px;
-	width: 80%;
-	height: 534px;
-	overflow: hidden;
-	margin-left: 50px;
-}
+	#photo-gallery {
+		position: relative;
+		bottom: 620px;
+		width: 80%;
+		height: 534px;
+		overflow: hidden;
+		margin-left: 50px;
+	}
 
-#photo-gallery ul li a img {
-	   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
-    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
-}
+	#photo-gallery ul li a img {
+		 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+	    filter: gray; /* IE6-9 */
+	    -webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+	    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+	    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+	}
 
-#photo-gallery ul li a img:hover {
-	   filter: none; /* Firefox 10+ */
-    filter: none; /* IE6-9 */
-    -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
-    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
-}
+	#photo-gallery ul li a img:hover {
+		   filter: none; /* Firefox 10+ */
+	    filter: none; /* IE6-9 */
+	    -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
+	    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+	    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+	}
 
-#photo-gallery ul {
-	list-style-type: none;
-}
+	#photo-gallery ul {
+		list-style-type: none;
+	}
 
-#photo-gallery ul li {
-	float:left;
-}
+	#photo-gallery ul li {
+		float:left;
+	}
 /*///PHOTO GALLERY*/
 
 #about-content {
