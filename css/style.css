@@ -77,6 +77,18 @@ nav {
 	}
 /*///TYPOGRAPHY*/
 
+.page-title {
+	position: relative;
+	margin: 0 0 -20% 10%;
+	z-index: 5;
+	width: 30%;
+	height: auto;
+}
+
+.page-title h1 {
+	font: 2em 'Open Sans Light', 'Helvetica', sans-serif;
+}
+
 /* VISIBLE FADE IN/OUT */
 	.on-screen {
 		opacity: 1;
@@ -94,8 +106,9 @@ nav {
 		background: url('../img/home-background.jpg') no-repeat fixed;
 		background-position: 50% 80%;
 		width: 100%; 
-		height: 1000px;
+		height: 1280px;
 	}
+
 
 	#home-content {
 		margin: 0 auto 0 auto;
@@ -103,51 +116,67 @@ nav {
 		padding-top: 10%;
 	}
 
-@media screen and (max-width: 500px) {
-	section#home {
-		height: 700px;
-	}
-}	
+	/*OLD SMARTPHONES*/
+	@media screen and (max-width: 500px) {
+		section#home {
+			height: 700px;
+		}
+	}	
+	/*OLD SMARTPHONES*/
 
-/*RETINA SCREENS */
-@media 
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-	section#home {
-		height: 1920px;
-		background: url('../img/home-bg-m.jpg') fixed no-repeat;
-		background: position;
-	}
+	/*RETINA SMARTPHONES */
+		@media 
+		only screen and (-webkit-min-device-pixel-ratio : 1.5),
+		only screen and (min-device-pixel-ratio : 1.5)
+		and
+		(orientation: portrait)
+		and
+		only screen (min-height: 1800px)
 
-	#home-content {
-		width: 80%;
-		text-align: center;
-		padding-top: 25%;
-	}
+		 {
+			section#home {
+				height: 1580px;
+				background: url('../img/home-bg-m.jpg') fixed no-repeat;
+				background-position: 50% 80%;
+			}
 
-	h1 {
-		font-size: 7em;
-	}
+			#home-content {
+				width: 80%;
+				text-align: center;
+				padding-top: 25%;
+			}
 
-	h2 {
-		font-size: 4em;
-	}
+			h1 {
+				font-size: 7em;
+				line-height: 2em;
+			}
 
-	p {
-		font-size: 2.5em;
-	}
-}
-/*RETINA SCREENS */
+			h2 {
+				font-size: 4em;
+				line-height: 1.5em;
+				padding-bottom: 1em;
+			}
 
+			p {
+				font-size: 2.5em;
+				line-height: 1.5em;
+			}
+
+			section#narrative video {
+				height: 1580px;
+			}
+		}
+	/*///RETINA SMARTPHONES */
 /*///HOME*/
 
+/*ARROW DOWN*/
 .arrow-down {
 	clear: both;
 	margin: 0 auto 0 auto;
-	width: 25px;
+	width: 5%;
 	opacity:0.5;
 	position: absolute;
-	bottom: 30px;
+	bottom: 10%;
 	left: 48%;
 	transition: opacity 0.2s ease-in;
 	z-index: 1;
@@ -156,6 +185,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 .arrow-down:hover {
 	opacity: 0.20;
 }
+/*///ARROW DOWN*/
 
 /*PHOTO GALLERY*/
 	#photo-gallery {
@@ -375,55 +405,60 @@ only screen and (min-device-pixel-ratio : 1.5) {
 	#prev:hover, #next:hover  {
 		opacity: 0.8;
 	}
-/* ----////carouFredSel SLIDER STYLE----------------------------------------*/	
+/*///carouFredSel SLIDER STYLE*/	
 
-.video-container {
-	text-align: center;
-}
-
-.video-controls {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
-
-/*#narrative video {
-	position: fixed; right: 0; bottom: 0;
-	min-width: 100%; min-height: 100%;
-	width: auto; height: auto; z-index: -100;
-	background: url(video/shot1-hd.gif) no-repeat;
-	background-size: cover;
-}*/
-
-@media screen and (min-width:320px) and (max-width: 600px){
-	.video-controls video{
-		height: 200px;
-		width: auto;
+/*VIDEO*/
+	.video-container {
+		clear: both;
+		display: block;
+		margin: 0 auto;
 	}
-}
 
-@media screen and (min-width:601px) and (max-width:2000px) {
-	.video-controls video{
-		height: 700px;
-		width: auto;
+	#narrative video {
+		width:100%;
+		background: url(../video/shot1-hd.gif) no-repeat;
+		background-size: cover;
 	}
-}
 
+	@media screen and (min-width:320px) and (max-width: 600px){
+		.video-controls video{
+			/*height: 200px;
+			width: auto;*/
+		}
+	}
 
+	@media screen and (min-width:601px) and (max-width:2000px) {
+		.video-controls video{
+			/*height: 700px;*/
+			/*width: auto;*/
+		}
+	}
 
-.play-pause {
-	text-align: center;
-	padding: 10px 20px;
-	border: 2px solid #CCE8DC ;
-	color: #CCE8DC;
-	text-decoration: none;
-	font: 14px "Open Sans", sans-serif;
-	font-weight: 100;
-	background-color: none;		
-	transition: all 0.25s linear;
-}
+	.play-pause {
+		text-align: center;
+		padding: 10px 20px;
+		border: 2px solid #CCE8DC ;
+		color: #CCE8DC;
+		text-decoration: none;
+		font: 14px "Open Sans", sans-serif;
+		font-weight: 100;
+		background-color: none;		
+		transition: all 0.25s linear;
+	}
 
-.play-pause:hover {
-	border-radius: 15px;
-	opacity: 0.5;
-} 
+	.play-pause:hover {
+		border-radius: 15px;
+		opacity: 0.5;
+	} 
+/*///VIDEO*/
+
+/*FULSCREEN SECTIONS*/
+	.full-page {
+		width: 100%;
+	}
+	#red {
+		background: red;
+	}
+	#blue {
+		background: blue;
+	}
