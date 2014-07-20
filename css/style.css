@@ -30,10 +30,9 @@ nav {
 		padding-left: 50px;
 	}
 
+
 	#menu a {
-		font-size:  12px;
-		font-weight: 100;
-		color: #CCE8DC;
+		font-size:  12px;		
 		letter-spacing: 2px;
 		line-height: 35px;
 		padding: 10px;
@@ -56,7 +55,7 @@ nav {
 	}
 
 	h1 {
-		font: 4.5em 'Droid Serif', Serif; /*72px/16px*/
+		font: 1.5em 'Open Sans Light', 'Helvetica', sans-serif;
 		color: #CCE8DC;
 	}
 
@@ -69,6 +68,7 @@ nav {
 	a {
 		text-decoration: none;
 		font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+		color: #CCE8DC;
 	}
 
 	p {
@@ -82,16 +82,12 @@ section {
 
 .page-title {
 	position: relative;
-	top: 100px;
-	/*margin: 0 0 -20% 10%;*/
-	z-index: 5;
+	top: 80px;
+	margin-left: 5%;
 	width: 30%;
 	height: 0;
 }
 
-.page-title h1 {
-	font: 2em 'Open Sans Light', 'Helvetica', sans-serif;
-}
 
 /* VISIBLE FADE IN/OUT */
 	.on-screen {
@@ -454,15 +450,25 @@ section {
 	}
 
 	.play-pause {
-		text-align: center;
-		padding: 10px 20px;
-		border: 2px solid #CCE8DC ;
+		text-align: center;				
+		border: 1px solid #CCE8DC ;
 		color: #CCE8DC;
 		text-decoration: none;
-		font: 14px "Open Sans", sans-serif;
+		font: 0.85em "Open Sans", sans-serif;
 		font-weight: 100;
 		background-color: none;		
 		transition: all 0.25s linear;
+		width: 10%;
+		min-width: 250px;
+		margin: 0 auto;
+		margin-top: 20%;
+	}
+
+	.play-pause a {
+		padding: 10px 20px;
+		display: block;
+		
+		
 	}
 
 	.play-pause:hover {

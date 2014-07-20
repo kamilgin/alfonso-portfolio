@@ -32,6 +32,8 @@ $(document).ready(function(){
 		}
 	)
 });
+
+//When the parent section of THIS element becomes visible, add class ".on-screen"
 	
 
 
