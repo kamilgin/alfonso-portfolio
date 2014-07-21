@@ -1,51 +1,60 @@
-			
 			$(function() {
-
-			
-
-				//	Scrolled by user interaction
-				$('#foo2').carouFredSel({
-					auto: false,
-					prev: '#prev',
-					next: '#next',
-					pagination: "#pager2",
-					mousewheel: true,
-					swipe: {
-						onMouse: true,
-						onTouch: true
-
-					},
-					items: {
-						
-					//	height: '30%',	//	optionally resize item-height
-						visible: {
-							min: 2,
-							max: 6
-						}
-					},
-					
-				});
-
-
 				//	Responsive layout, resizing the items
-				$('#foo4').carouFredSel({
+				$('#narrative-slider').carouFredSel({
+					auto: false,
 					responsive: true,
 					width: '100%',
-					scroll: 2,
+					scroll: 1,
+					prev: '#prev1',
+					next: '#next1',		
+					pagination: '#pagination4',			
 					items: {
 						width: 400,
 					//	height: '30%',	//	optionally resize item-height
 						visible: {
-							min: 2,
+							min: 1,
+							max: 6
+						}
+					}
+					
+				});
+
+				$('#foo5').carouFredSel({
+					auto: false,
+					responsive: true,
+					width: '100%',
+					scroll: 1,
+					prev: '#prev5',
+					next: '#next5',
+					pagination: '#pagination5',					
+					items: {
+						width: 400,
+					//	height: '30%',	//	optionally resize item-height
+						visible: {
+							min: 1,
 							max: 6
 						}
 					}
 				});
 
-				//	Fuild layout, centering the items
-				$('#foo5').carouFredSel({
+				$('#foo6').carouFredSel({
+					auto: false,
+					responsive: true,
 					width: '100%',
-					scroll: 2
+					scroll: 1,
+					prev: '#prev6',
+					next: '#next6',	
+					pagination: '#pagination6',
+					items: {
+						width: 400,
+					//	height: '30%',	//	optionally resize item-height
+						visible: {
+							min: 1,
+							max: 6
+						}
+					}
 				});
+
+				
 
 			});

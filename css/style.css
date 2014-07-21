@@ -338,10 +338,9 @@ section {
 	}
 
 	.list_carousel {
-			width: 4000px;
+			width: 100%;
 			float:left;
 			padding: 0 70px
-
 	}
 
 	.list_carousel ul {
@@ -350,8 +349,8 @@ section {
 
 	.list_carousel ul li {
 		float: left;
-		width: 30%;
-		height: 150px;
+		width: 300px;
+		height: 200px;
 	}
 
 	.list_carousel ul li:last-child{
@@ -395,7 +394,7 @@ section {
 		text-align: center;
 	}
 
-	#prev, #next {
+	#prev1, #next1 {
 		display: block;
 		width: 110px;
 		height: 220px;
@@ -405,21 +404,55 @@ section {
 		transition: opacity 0.18s ease-in;
 	}
 
-	#prev {
+	#prev1 {
 		background: url(../img/arrow-left.png) no-repeat #FFFAEE;
 		background-position: center center;
 		left: 0;
 	}
 
-	#next {
+	#next1 {
 		background: url(../img/arrow-right.png) no-repeat #FFFAEE;
 		background-position: center center;
 		right: 0;
 	}
 
-	#prev:hover, #next:hover  {
+	#prev1:hover, #next1:hover  {
 		opacity: 0.8;
 	}
+
+	.overlay {
+	background: rgba(90, 73, 65, 0.5);
+	opacity: 0;
+	font: 10px "Open Sans", sans-serif;
+	font-weight: 100;
+	width: 400px;
+	height: 200px;
+	transition: all 0.35s ease-in;
+	text-align: center;
+	text-transform: uppercase;
+	overflow: hidden;	
+}
+
+.overlay a {
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+	width: 200px;
+	height: 200px;
+	padding-top: 50px;
+	color: #CCE8DC;	
+	position: relative;
+	bottom: -20px;
+	transition: all 0.35s ease-in;
+}
+
+.overlay span {
+	color: #FFFAEE;
+}
+
+.round:hover .overlay, .news-thumb:hover .overlay{
+	opacity: 1;
+}
 /*///carouFredSel SLIDER STYLE*/	
 
 /*VIDEO*/
@@ -476,11 +509,3 @@ section {
 		opacity: 0.5;
 	} 
 /*///VIDEO*/
-
-/*FULSCREEN SECTIONS*/
-	#red {
-		background: red;
-	}
-	#blue {
-		background: blue;
-	}
