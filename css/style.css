@@ -338,13 +338,15 @@ section {
 	}
 
 	.list_carousel {
-		width: 100%;
+		width: 80%;
 		float:left;
 		
 	}
 
 	.list_carousel ul {
 		list-style-type: none;
+		padding: 0;
+		width: 100%;
 	}
 
 	.list_carousel ul li {
@@ -356,6 +358,8 @@ section {
 	.list_carousel ul li:last-child{
 		margin: 0;
 	}	
+
+
 
 	.clearfix {
 		float: none;
@@ -395,11 +399,12 @@ section {
 	}
 
 	.slider-arrow {
-		margin-top: 75%;
+		padding-top: 55%;
 	}
 
 	.prev-arrow, .next-arrow {
 		width: 10%;
+		float: left;
 	}
 
 	#prev1, #next1 {
