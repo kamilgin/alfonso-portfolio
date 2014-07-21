@@ -338,9 +338,9 @@ section {
 	}
 
 	.list_carousel {
-			width: 100%;
-			float:left;
-			padding: 0 70px
+		width: 100%;
+		float:left;
+		
 	}
 
 	.list_carousel ul {
@@ -398,12 +398,16 @@ section {
 		margin-top: 75%;
 	}
 
+	.prev-arrow, .next-arrow {
+		width: 10%;
+	}
+
 	#prev1, #next1 {
 		display: block;
-		width: 110px;
-		height: 220px;
+		
+		height: 222px;
 		/*float: left;*/
-		position: absolute;	
+		/*position: absolute;*/
 		z-index: 1;
 		opacity: 0.5;
 		transition: opacity 0.18s ease-in;		
