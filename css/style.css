@@ -197,6 +197,13 @@ section {
 	z-index: 1;
 }
 
+.arrow-down img {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+}
+
 .arrow-down:hover {
 	opacity: 0.20;
 }
@@ -359,8 +366,6 @@ section {
 		margin: 0;
 	}	
 
-
-
 	.clearfix {
 		float: none;
 		clear: both;
@@ -407,9 +412,15 @@ section {
 		float: left;
 	}
 
+	#prev1 img {
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+	}
+
 	#prev1, #next1 {
-		display: block;
-		
+		display: block;		
 		height: 222px;
 		/*float: left;*/
 		/*position: absolute;*/
