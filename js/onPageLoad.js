@@ -19,13 +19,13 @@
 					
 				});
 
-				$('#foo5').carouFredSel({
+				$('#commercial-slider').carouFredSel({
 					auto: false,
 					responsive: true,
 					width: '100%',
 					scroll: 1,
-					prev: '#prev5',
-					next: '#next5',
+					prev: '#prev2',
+					next: '#next2',
 					pagination: '#pagination5',					
 					items: {
 						width: 400,
@@ -37,13 +37,13 @@
 					}
 				});
 
-				$('#foo6').carouFredSel({
+				$('#documentary-slider').carouFredSel({
 					auto: false,
 					responsive: true,
 					width: '100%',
 					scroll: 1,
-					prev: '#prev6',
-					next: '#next6',	
+					prev: '#prev3',
+					next: '#next3',	
 					pagination: '#pagination6',
 					items: {
 						width: 400,

@@ -113,6 +113,16 @@ section {
 		margin: 0 auto 0 auto;
 		width: 35%;
 		padding-top: 10%;
+		text-align: center;
+	}
+
+	#home-content h1 {
+		font: 4em normal 'Droid Serif', Garamond, serif;
+	}
+
+	#home-content p {
+		font-size: 1em;
+		line-height: 1.5em;
 	}
 
 	/*OLD SMARTPHONES*/
@@ -370,38 +380,85 @@ section {
 		float: none;
 		clear: both;
 	}
+	/*NARRATIVE SLIDER THUMBS */
+		#news1 {
+			background: url(../img/red.jpg)
+		}
 
-	#news1 {
-		background: url(../img/red.jpg)
-	}
+		#news2 {
+			background: url(../img/window.jpg)
+		}
 
-	#news2 {
-		background: url(../img/window.jpg)
-	}
+		#news3 {
+			background: url(../img/sunset.jpg)
+		}
 
-	#news3 {
-		background: url(../img/sunset.jpg)
-	}
+		#news4 {
+			background: url(../img/window.jpg)
+		}
 
-	#news4 {
-		background: url(../img/window.jpg)
-	}
+		#news5 {
+			background: url(../img/red.jpg)
+		}
 
-	#news5 {
-		background: url(../img/red.jpg)
-	}
+		#news6 {
+			background: url(../img/sunset.jpg)
+		}
+	/*///NARRATIVE SLIDER THUMBS */
 
-	#news6 {
-		background: url(../img/sunset.jpg)
-	}
+	/*COMMERCIAL SLIDER THUMBS */
+		#commercial1 {
+			background: url(../img/red.jpg)
+		}
 
+		#commercial2 {
+			background: url(../img/window.jpg)
+		}
 
-	.news-title {
-		color: #725D54;
-		background: #FFFAEE;
-		display: block;
-		text-align: center;
-	}
+		#commercial3 {
+			background: url(../img/sunset.jpg)
+		}
+
+		#commercial4 {
+			background: url(../img/window.jpg)
+		}
+
+		#commercial5 {
+			background: url(../img/red.jpg)
+		}
+
+		#commercial6 {
+			background: url(../img/sunset.jpg)
+		}
+	/*///COMMERCIAL SLIDER THUMBS */
+
+	/*COMMERCIAL SLIDER THUMBS */
+		#documentary1 {
+			background: url(../img/red.jpg)
+		}
+
+		#documentary2 {
+			background: url(../img/window.jpg)
+		}
+
+		#documentary3 {
+			background: url(../img/sunset.jpg)
+		}
+
+		#documentary4 {
+			background: url(../img/window.jpg)
+		}
+
+		#documentary5 {
+			background: url(../img/red.jpg)
+		}
+
+		#documentary6 {
+			background: url(../img/sunset.jpg)
+		}
+	/*///COMMERCIAL SLIDER THUMBS */
+
+	
 
 	.slider-arrow {
 		padding-top: 55%;
@@ -410,36 +467,31 @@ section {
 	.prev-arrow, .next-arrow {
 		width: 10%;
 		float: left;
+		display: block;		
+		height: 222px;		
+		z-index: 1;
+		opacity: 0.5;
+		transition: opacity 0.18s ease-in;	
 	}
 
-	#prev1 img {
+	.prev-arrow {
+		background: #112936;
+		left: 0;
+	}
+
+	.prev-arrow img{
 		transform: rotate(180deg);
 		-webkit-transform: rotate(180deg);
 		-moz-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
 	}
 
-	#prev1, #next1 {
-		display: block;		
-		height: 222px;
-		/*float: left;*/
-		/*position: absolute;*/
-		z-index: 1;
-		opacity: 0.5;
-		transition: opacity 0.18s ease-in;		
-	}
-
-	#prev1 {
-		background: #112936;
-		left: 0;
-	}
-
-	#next1 {
+	.next-arrow {
 		background: #112936;
 		right: 0;
 	}
 
-	#prev1:hover, #next1:hover  {
+	.prev-arrow:hover, .next-arrow:hover {
 		opacity: 0.8;
 	}
 
