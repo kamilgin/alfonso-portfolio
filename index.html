@@ -14,14 +14,17 @@
 				<!--script type="text/javascript" src="js/jquery-1.8.2.min.js"></script-->
 				<script type="text/javascript" src="js/onPageLoad.js"></script>
 				<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
-				<script type="text/javascript" src="js/scroll.js"></script>
-				<script type="text/javascript" src="js/jquery.visible.min.js"></script>
-				<script type="text/javascript" src="js/on-off-screen.js"></script>
+				<!--script type="text/javascript" src="js/scroll.js"></script-->
+				<!--script type="text/javascript" src="js/jquery.visible.min.js"></script-->
+				<!--script type="text/javascript" src="js/on-off-screen.js"></script-->
 				<script type="text/javascript" src="js/fullscreen-sections.js"></script>		
+				<script type="text/javascript" src="js/overlay.js"></script>	
+				<script type="text/javascript" src="js/mobile-menu.js"></script>	
+
 		<!--/JS-->
 	</head>
 	<body>
-		<header>
+		<header id="main-header">
 			<div id="logo">
 				<a href="#home">
 					<!-- LOGO SVG -->
@@ -30,6 +33,7 @@
 				</a>	
 			</div>
 			<nav>
+				<a href="#" id="close-menu">x</a>	
 					<ul id="menu">
 						<li><a href="#narrative">NARRATIVE</a></li>
 						<li><a href="#commercial">COMMERICAL</a></li>
@@ -50,8 +54,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				</div>
 				<div class="arrow-down">
-					<a href="#narrative">
-						<img src="img/arrow.svg" alt="scroll down">
+					<a href="#narrative">						
 					</a>
 				</div>
 			</section>		
@@ -60,7 +63,7 @@
 			<!-- NARRATIVE-->
 	
 			<section id="narrative" class="full-width full-height">
-				<a name="narrative"></a>
+				<!-- <a name="narrative"></a> -->
 				<div class="page-title">	
 					<h1>NARRATIVE</h1>					
 				</div>								
@@ -75,7 +78,7 @@
 
 						<!-- SLIDER -->
 							<div class="wrapper">
-								<h2>News & Events</h2>
+								<h2>Projects</h2>
 								<div class="prev-arrow">
 									<a id="prev1" href="#">
 										<div class="slider-arrow">
@@ -116,39 +119,7 @@
 											
 											</div>
 										</li>
-										<li>
-											<div class="news-thumb" id="news4">
-													<div class="overlay">
-														<a href="#">
-															<span>Some Project Title</span><br><small>2014</small>
-														</a>
-													</div>
-														
-											
-											</div>
-										</li>
-										<li>
-											<div class="news-thumb" id="news5">
-													<div class="overlay">
-														<a href="#">
-															<span>Some Project Title</span><br><small>2014</small>
-														</a>
-													</div>
-														
-											
-											</div>
-										</li>
-										<li>
-											<div class="news-thumb" id="news6">
-													<div class="overlay">
-														<a href="#">
-															<span>Some Project Title</span><br><small>2014</small>
-														</a>
-													</div>
-														
-											
-											</div>
-										</li>
+										
 									</ul>
 
 									<div class="clearfix"></div>
@@ -170,7 +141,7 @@
 
 
 				<div class="arrow-down">
-					<a href="#commercial"><img src="img/arrow.svg" alt="scroll down"></a>
+					<a href="#commercial"><!--  --></a>
 				</div>				
 			</section>
 			<!--///NARRATIVE-->
@@ -223,7 +194,9 @@
 												<div class="overlay">
 													<a href="#">
 														<span>Some Project Title</span><br><small>2014</small>
+														
 													</a>
+
 												</div>
 													
 										
@@ -278,7 +251,7 @@
 						</div>
 					<!-- ///SLIDER -->
 				<div class="arrow-down">
-					<a href="#documentary"><img src="img/arrow.svg" alt="scroll down"></a>
+					<a href="#documentary"></a>
 				</div>	
 			</section>
 			<!-- ///COMMERCIAL-->
@@ -385,7 +358,7 @@
 						</div>
 					<!-- ///SLIDER -->
 				<div class="arrow-down">
-					<a href="#photography"><img src="img/arrow.svg" alt="scroll down"></a>
+					<a href="#photography"></a>
 				</div>	
 			</section>
 			<!--/// DOCUMENTARY -->
