@@ -5,9 +5,11 @@
 		<title>Alfonso Chin - Cinematographer in Vancouver</title>
 		<meta name="description" content="Alfonso Chin - Cinematographer in Vancouver">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" href="css/responsive-nav.css">
 		<!--FONTS-->
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>			
 		<!--/FONTS-->
 		<!--JS-->
 				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -18,78 +20,163 @@
 				<!--script type="text/javascript" src="js/jquery.visible.min.js"></script-->
 				<!--script type="text/javascript" src="js/on-off-screen.js"></script-->
 				<script type="text/javascript" src="js/fullscreen-sections.js"></script>		
-				<script type="text/javascript" src="js/overlay.js"></script>	
-				<script type="text/javascript" src="js/mobile-menu.js"></script>	
+				<script type="text/javascript" src="js/overlay.js"></script>					
+				
+				<script type="text/javascript" src="js/responsive-nav.js"></script>
 
+				<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+				<script type="text/javascript" src="js/fullpage-init.js"></script>		
 		<!--/JS-->
 	</head>
 	<body>
-		<header id="main-header">
-			<div id="logo">
-				<a href="#home">
-					<!-- LOGO SVG -->
-						<object type="image/svg+xml" data="img/logo.svg"></object>
-					<!-- // LOGO SVG -->
-				</a>	
-			</div>
-			<nav>
-				<a href="#" id="close-menu">x</a>	
-					<ul id="menu">
-						<li><a href="#narrative">NARRATIVE</a></li>
-						<li><a href="#commercial">COMMERICAL</a></li>
-						<li><a href="#documentary">DOCUMENTARY</a></li>
-						<li><a href="#photography">PHOTOGRAPHY</a></li>
-						<li><a href="#about">ABOUT ME</a></li>
-						<li><a href="#contact">CONTACT</a></li>
-					</ul>	
-			</nav>
-		</header>
-		<!--SECTIONS USE CLASSES AND HTML FROM: www.minimit.com/demos/parallax-backgrounds-with-centered-content -->	
-		<!-- HOME-->
-			<section id="home" class="full-height full-width">
-				<a href="#home"></a>
-				<div id="home-content" class="toggle-view">
-					<h1>Alfonso Chin</h1>
-					<h2>Cinematographer in Vancouver, Canada</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		<div id="fullpage">			
+			<header id="main-header">
+				<div id="logo">
+					<a href="#home">						
+						<img src="img/logo.svg" alt="Alfonso Chin"/>					
+					</a>	
 				</div>
-				<div class="arrow-down">
-					<a href="#narrative">						
-					</a>
+				<nav class="nav-collapse">					
+						<ul id="menu">
+							<li data-menuanchor="narrative"><a href="#narrative">NARRATIVE</a></li>
+							<li data-menuanchor="commercial"><a href="#commercial">COMMERICAL</a></li>
+							<li data-menuanchor="documentary"><a href="#documentary">DOCUMENTARY</a></li>
+							<li data-menuanchor="photography"><a href="#photography">PHOTOGRAPHY</a></li>
+							<li data-menuanchor="about"><a href="#about">ABOUT ME</a></li>
+							<li data-menuanchor="contact"><a href="#contact">CONTACT</a></li>
+						</ul>	
+				</nav>
+			</header>			
+			<!-- HOME-->
+				<!-- <section id="home" class="full-height full-width"> -->
+				<div id="home"  data-anchor="home" class="full-height full-width section">
+					<a href="#home"></a>
+					<div id="home-content" class="toggle-view">
+						<h1>Alfonso Chin</h1>
+						<h2>Cinematographer in Vancouver, Canada</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					</div>
+					<div class="arrow-down">
+						<a href="#narrative">						
+						</a>
+					</div>
+				<!-- </section> -->		
 				</div>
-			</section>		
-			<!-- ///HOME-->
-			
-			<!-- NARRATIVE-->
-	
-			<section id="narrative" class="full-width full-height">
-				<!-- <a name="narrative"></a> -->
-				<div class="page-title">	
-					<h1>NARRATIVE</h1>					
-				</div>								
-					
-						<div  class="play-pause">
-							<a href="#" >
-								<object type="image/svg+xml" data="img/play.svg" ></object>
-								&nbsp;
-								<span>WATCH NARRATIVE REEL</span>
-							</a>
-						</div>
+				<!-- ///HOME-->
+				
+				<!-- NARRATIVE-->
+		
+				<!-- <section id="narrative" class="full-width full-height"> -->
+				<div id="narrative"  data-anchor="narrative" class="full-width full-height section">
+					<!-- <a name="narrative"></a> -->
+					<div class="page-title">	
+						<h1>NARRATIVE</h1>					
+					</div>														
+							<div  class="play-pause">
+								<a href="#" >
+									<object type="image/svg+xml" data="img/play.svg" ></object>
+									&nbsp;
+									<span>WATCH NARRATIVE REEL</span>
+								</a>
+							</div>
 
-						<!-- SLIDER -->
-							<div class="wrapper">
+							<!-- SLIDER -->
+								<div class="wrapper">
+									<h2>Projects</h2>
+									<div class="prev-arrow">
+										<a id="prev1" href="#">
+											<div class="slider-arrow">
+												<img src="img/arrow.svg" alt="Prev">
+											</div>
+										</a>
+									</div>	
+									<div class="list_carousel">
+										<ul id="narrative-slider">
+											<li>
+												<div class="news-thumb" id="news1">
+														<div class="overlay">
+															<a href="#">
+																<span>Some Project Title</span><br><small>2014</small>
+															</a>
+														</div>
+																						
+												</div>
+											</li>
+											<li>
+												<div class="news-thumb" id="news2">
+														<div class="overlay">
+															<a href="#">
+																<span>Some Project Title</span><br><small>2014</small>
+															</a>
+														</div>
+																						
+												</div>
+											</li>
+											<li>
+												<div class="news-thumb" id="news3">
+														<div class="overlay">
+															<a href="#">
+																<span>Some Project Title</span><br><small>2014</small>
+															</a>
+														</div>
+															
+												
+												</div>
+											</li>
+											
+										</ul>
+
+										<div class="clearfix"></div>
+
+										<!-- <div id="pager2" class="pager">
+										</div> -->
+
+									</div>
+									<div class="next-arrow" >
+										<a id="next1" href="#">
+											<div class="slider-arrow">
+												<img src="img/arrow.svg" lat="next">
+											</div>
+										</a>
+									</div>
+								</div>
+							<!-- ///SLIDER -->
+						
+
+
+					<div class="arrow-down">
+						<a href="#commercial"><!--  --></a>
+					</div>				
+				<!-- </section> -->
+				</div>
+				<!--///NARRATIVE-->
+
+				<!-- COMMERCIAL -->
+				<!--section id="commercial" class="full-width full-height"-->
+				<div id="commercial" class="full-width full-height section">
+					<div class="page-title">	
+						<h1>COMMERCIAL</h1>					
+					</div>
+					<div  class="play-pause">
+						<a href="#" >
+							<object type="image/svg+xml" data="img/play.svg" ></object>
+							&nbsp;
+							<span>WATCH COMMERCIAL REEL</span>
+						</a>
+					</div>
+					<div class="wrapper">
 								<h2>Projects</h2>
 								<div class="prev-arrow">
-									<a id="prev1" href="#">
+									<a id="prev2" href="#">
 										<div class="slider-arrow">
 											<img src="img/arrow.svg" alt="Prev">
 										</div>
 									</a>
 								</div>	
 								<div class="list_carousel">
-									<ul id="narrative-slider">
+									<ul id="commercial-slider">
 										<li>
-											<div class="news-thumb" id="news1">
+											<div class="news-thumb" id="commercial1">
 													<div class="overlay">
 														<a href="#">
 															<span>Some Project Title</span><br><small>2014</small>
@@ -99,7 +186,7 @@
 											</div>
 										</li>
 										<li>
-											<div class="news-thumb" id="news2">
+											<div class="news-thumb" id="commercial2">
 													<div class="overlay">
 														<a href="#">
 															<span>Some Project Title</span><br><small>2014</small>
@@ -109,7 +196,20 @@
 											</div>
 										</li>
 										<li>
-											<div class="news-thumb" id="news3">
+											<div class="news-thumb" id="commercial3">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+															
+														</a>
+
+													</div>
+														
+											
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="commercial4">
 													<div class="overlay">
 														<a href="#">
 															<span>Some Project Title</span><br><small>2014</small>
@@ -119,7 +219,26 @@
 											
 											</div>
 										</li>
-										
+										<li>
+											<div class="news-thumb" id="commercial5">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
+														
+											
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="commercial6">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>																		
+											</div>
+										</li>
 									</ul>
 
 									<div class="clearfix"></div>
@@ -129,7 +248,7 @@
 
 								</div>
 								<div class="next-arrow" >
-									<a id="next1" href="#">
+									<a id="next2" href="#">
 										<div class="slider-arrow">
 											<img src="img/arrow.svg" lat="next">
 										</div>
@@ -137,231 +256,140 @@
 								</div>
 							</div>
 						<!-- ///SLIDER -->
-					
-
-
-				<div class="arrow-down">
-					<a href="#commercial"><!--  --></a>
-				</div>				
-			</section>
-			<!--///NARRATIVE-->
-
-			<!-- COMMERCIAL -->
-			<section id="commercial" class="full-width full-height">
-				<div class="page-title">	
-					<h1>COMMERCIAL</h1>					
+					<div class="arrow-down">
+						<a href="#documentary"></a>
+					</div>	
+				<!-- </section> -->
 				</div>
-				<div  class="play-pause">
-					<a href="#" >
-						<object type="image/svg+xml" data="img/play.svg" ></object>
-						&nbsp;
-						<span>WATCH COMMERCIAL REEL</span>
-					</a>
-				</div>
-				<div class="wrapper">
-							<h2>Projects</h2>
-							<div class="prev-arrow">
-								<a id="prev2" href="#">
-									<div class="slider-arrow">
-										<img src="img/arrow.svg" alt="Prev">
-									</div>
-								</a>
-							</div>	
-							<div class="list_carousel">
-								<ul id="commercial-slider">
-									<li>
-										<div class="news-thumb" id="commercial1">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-																				
+				<!-- ///COMMERCIAL-->
+				<!-- DOCUMENTARY-->
+				<!-- <section id="documentary" class="full-width full-height"> -->
+				<div id="documentary" class="full-width full-height section">
+					<div class="page-title">	
+						<h1>DOCUMENTARY</h1>					
+					</div>
+					<div  class="play-pause">
+						<a href="#" >
+							<object type="image/svg+xml" data="img/play.svg" ></object>
+							&nbsp;
+							<span>WATCH DOCUMENTARY REEL</span>
+						</a>
+					</div>
+					<div class="wrapper">
+								<h2>Projects</h2>
+								<div class="prev-arrow">
+									<a id="prev3" href="#">
+										<div class="slider-arrow">
+											<img src="img/arrow.svg" alt="Prev">
 										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="commercial2">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-																				
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="commercial3">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
+									</a>
+								</div>	
+								<div class="list_carousel">
+									<ul id="documentary-slider">
+										<li>
+											<div class="news-thumb" id="documentary1">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
+																					
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="documentary2">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
+																					
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="documentary3">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
 														
-													</a>
+											
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="documentary4">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
+														
+											
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="documentary5">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>
+														
+											
+											</div>
+										</li>
+										<li>
+											<div class="news-thumb" id="documentary6">
+													<div class="overlay">
+														<a href="#">
+															<span>Some Project Title</span><br><small>2014</small>
+														</a>
+													</div>																		
+											</div>
+										</li>
+									</ul>
 
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="commercial4">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="commercial5">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="commercial6">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>																		
-										</div>
-									</li>
-								</ul>
+									<div class="clearfix"></div>
 
-								<div class="clearfix"></div>
+									<!-- <div id="pager2" class="pager">
+									</div> -->
 
-								<!-- <div id="pager2" class="pager">
-								</div> -->
-
+								</div>
+								<div class="next-arrow" >
+									<a id="next3" href="#">
+										<div class="slider-arrow">
+											<img src="img/arrow.svg" lat="next">
+										</div>
+									</a>
+								</div>
 							</div>
-							<div class="next-arrow" >
-								<a id="next2" href="#">
-									<div class="slider-arrow">
-										<img src="img/arrow.svg" lat="next">
-									</div>
-								</a>
-							</div>
-						</div>
-					<!-- ///SLIDER -->
-				<div class="arrow-down">
-					<a href="#documentary"></a>
-				</div>	
-			</section>
-			<!-- ///COMMERCIAL-->
-			<!-- DOCUMENTARY-->
-			<section id="documentary" class="full-width full-height">
-				<div class="page-title">	
-					<h1>DOCUMENTARY</h1>					
+						<!-- ///SLIDER -->
+					<div class="arrow-down">
+						<a href="#photography"></a>
+					</div>	
+				<!-- </section> -->
 				</div>
-				<div  class="play-pause">
-					<a href="#" >
-						<object type="image/svg+xml" data="img/play.svg" ></object>
-						&nbsp;
-						<span>WATCH DOCUMENTARY REEL</span>
-					</a>
-				</div>
-				<div class="wrapper">
-							<h2>Projects</h2>
-							<div class="prev-arrow">
-								<a id="prev3" href="#">
-									<div class="slider-arrow">
-										<img src="img/arrow.svg" alt="Prev">
-									</div>
-								</a>
-							</div>	
-							<div class="list_carousel">
-								<ul id="documentary-slider">
-									<li>
-										<div class="news-thumb" id="documentary1">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-																				
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="documentary2">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-																				
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="documentary3">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="documentary4">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="documentary5">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>
-													
-										
-										</div>
-									</li>
-									<li>
-										<div class="news-thumb" id="documentary6">
-												<div class="overlay">
-													<a href="#">
-														<span>Some Project Title</span><br><small>2014</small>
-													</a>
-												</div>																		
-										</div>
-									</li>
-								</ul>
-
-								<div class="clearfix"></div>
-
-								<!-- <div id="pager2" class="pager">
-								</div> -->
-
-							</div>
-							<div class="next-arrow" >
-								<a id="next3" href="#">
-									<div class="slider-arrow">
-										<img src="img/arrow.svg" lat="next">
-									</div>
-								</a>
-							</div>
-						</div>
-					<!-- ///SLIDER -->
-				<div class="arrow-down">
-					<a href="#photography"></a>
-				</div>	
-			</section>
-			<!--/// DOCUMENTARY -->
-			
+				<!--/// DOCUMENTARY -->
+		</div>		
+	<!-- RESPONSIVE NAV HOOK UP-->
+	<script>
+  		var nav = responsiveNav(".nav-collapse", { // Selector
+		  animate: true, // Boolean: Use CSS3 transitions, true or false
+		  transition: 284, // Integer: Speed of the transition, in milliseconds
+		  label: "Menu", // String: Label for the navigation toggle
+		  insert: "before", // String: Insert the toggle before or after the navigation
+		  customToggle: "", // Selector: Specify the ID of a custom toggle
+		  closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+		  openPos: "relative", // String: Position of the opened nav, relative or static
+		  navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+		  navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
+		  jsClass: "js", // String: 'JS enabled' class which is added to  element
+		  init: function(){}, // Function: Init callback
+		  open: function(){}, // Function: Open callback
+		  close: function(){} // Function: Close callback
+		});
+	</script>
+	<!--/// RESPONSIVE NAV HOOK UP-->
 	</body>
 </html>

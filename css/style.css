@@ -21,6 +21,12 @@ nav {
 	padding-left: 40px;
 }
 
+#logo a {
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+
 #close-menu {
 	display:none;
 }
@@ -81,9 +87,6 @@ nav {
 		color: #CCE8DC;
 	}
 /*///TYPOGRAPHY*/
-section {
-	position: relative;
-}
 
 .page-title {
 	position: relative;
@@ -108,7 +111,7 @@ section {
 /* /// VISIBLE FADE IN/OUT */
 
 /*HOME*/
-	section#home {
+	#home {
 		background: url('../img/home-background.jpg') no-repeat fixed;
 		background-position: 50% 80%;
 		/*width: 100%; */
@@ -541,7 +544,7 @@ section {
 	/*///VIDEO*/
 
 /*MOBILE/TABLET MENU*/
-		@media screen and (max-width: 960px) {
+/*		@media screen and (max-width: 960px) {
 			ul#menu {
 				padding: 0;
 				max-width: 100%;
@@ -561,14 +564,13 @@ section {
 			} 
 			
 			#menu li a {
-				font-size: 1em;
-				/*line-height: 3em;*/
+				font-size: 1em;				
 				display: block;
 			}
 
 			header {
 				height: auto;
-				background: rgba(18, 41, 54, 0.95);			
+				background: rgba(18, 41, 54, 0.95);							
 			}			
 
 			nav {
@@ -577,16 +579,25 @@ section {
 			}
 
 			a#close-menu {
-
 				display: block;
 				width: 2em;
-				height: 2em;
+				height: 2em;												
 				text-align: center;
 				font-size: 1.5em;
 				font-weight: 100;
 				float: right;
 			}
-		}
+
+			.slide-out {
+				position: absolute;
+				right: 1000px;
+				transition: all 0.5s ease-in;
+			}
+
+			.slide-in {
+				position: static;
+			}
+		}*/
 /*///MOBILE/TABLET MENU*/
 
 
@@ -601,7 +612,7 @@ section {
 		only screen (min-height: 1800px)
 
 		 {
-			section#home {
+			#home {
 				height: 1580px;
 				background: url('../img/home-bg-m.jpg') fixed no-repeat;
 				background-position: 50% 80%;
@@ -629,7 +640,7 @@ section {
 				line-height: 1.5em;
 			}
 
-			section#narrative video {
+			#narrative video {
 				height: 1580px;
 			}
 		}
@@ -638,19 +649,5 @@ section {
 	@media screen and (max-width: 720px) {
 		.play-pause {
 			margin-top: 60%;
-		}
-	}
-
-	@media screen and (min-width:320px) and (max-width: 600px){
-		.video-controls video{
-			/*height: 200px;
-			width: auto;*/
-		}
-	}
-
-	@media screen and (min-width:601px) and (max-width:2000px) {
-		.video-controls video{
-			/*height: 700px;*/
-			/*width: auto;*/
 		}
 	}
